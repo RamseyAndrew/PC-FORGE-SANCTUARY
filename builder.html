@@ -24,7 +24,7 @@
       <h2>Select Your Components</h2>
 
       <div class="component-category">
-        <h3><img src="images/icon-cpu.svg" alt=""> Processor (CPU)</h3>
+        <h3>Processor (CPU)</h3>
         <div class="component-grid">
           <div class="component-card">
             <img src="images/Intel Core i9-13900K.jpeg" alt="Intel Core i9-13900K">
@@ -46,7 +46,7 @@
       </div>
 
       <div class="component-category">
-        <h3><img src="images/icon-gpu.svg" alt=""> Graphics Card (GPU)</h3>
+        <h3>Graphics Card (GPU)</h3>
         <div class="component-grid">
           <div class="component-card">
             <img src="images/NVIDIA GeForce RTX 4090.jpeg" alt="NVIDIA RTX 4090">
@@ -66,8 +66,27 @@
           </div>
         </div>
       </div>
-
-      <!-- Additional component categories would go here -->
+      <div class="component-category">
+        <h3>Graphics Card (GPU)</h3>
+        <div class="component-grid">
+          <div class="component-card">
+            <img src="images/NVIDIA GeForce RTX 4090.jpeg" alt="NVIDIA RTX 4090">
+            <div class="component-info">
+              <h4>NVIDIA GeForce RTX 4090</h4>
+              <p class="price">$1,599</p>
+              <button onclick="addToCart('GPU', 'NVIDIA RTX 4090', 1599, 'NVIDIA GeForce RTX 4090.jpeg')">Add to Build</button>
+            </div>
+          </div>
+          <div class="component-card">
+            <img src="images/AMD Radeon RX 7900 XTX.jpeg" alt="AMD RX 7900 XTX">
+            <div class="component-info">
+              <h4>AMD Radeon RX 7900 XTX</h4>
+              <p class="price">$999</p>
+              <button onclick="addToCart('GPU', 'AMD RX 7900 XTX', 999, 'AMD Radeon RX 7900 XTX.jpeg')">Add to Build</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <aside class="build-summary">
