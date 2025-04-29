@@ -66,6 +66,13 @@ function addToCart(category, name, price, image) {
     renderBuildItems();
   }
 }
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    saveCart();
+    renderCart();
+    updateCartCount();
+  }
+  
 
 document.addEventListener('DOMContentLoaded', () => {
   if (window.location.href.includes('cart.html')) {
