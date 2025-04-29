@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your PC - PC FORGE SANCTUARY</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>PC FORGE SANCTUARY<span>PC Builder</span></h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="builder.html" class="active">Build Your PC</a>
+        <a href="cart.html">Your Cart (<span id="cart-count">0</span>)</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container builder-container">
+    <section class="component-selection">
+      <h2>Select Your Components</h2>
+      
+      <div class="component-category">
+        <h3><img src="images/icon-cpu.svg" alt=""> Processor (CPU)</h3>
+        <div class="component-grid">
+          <div class="component-card" onclick="addToCart('CPU', 'Intel Core i9-13900K', 589, 'Intel Core i9-13900K.jpeg')">
+            <img src="images/Intel Core i9-13900K.jpeg" alt="Intel Core i9-13900K">
+            <div class="component-info">
+              <h4>Intel Core i9-13900K</h4>
+              <p class="price">$589</p>
+              <button>Add to Build</button>
+            </div>
+          </div>
+          <div class="component-card" onclick="addToCart('CPU', 'AMD Ryzen 9 7950X', 549, 'AMD Ryzen 9 7950X3D.jpeg')">
+            <img src="images/AMD Ryzen 9 7950X3D.jpeg" alt="AMD Ryzen 9 7950X">
+            <div class="component-info">
+              <h4>AMD Ryzen 9 7950X3D</h4>
+              <p class="price">$549</p>
+              <button>Add to Build</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="component-category">
+        <h3><img src="images/icon-gpu.svg" alt=""> Graphics Card (GPU)</h3>
+        <div class="component-grid">
+          <div class="component-card" onclick="addToCart('GPU', 'NVIDIA RTX 4090', 1599, 'NVIDIA GeForce RTX 4090.jpeg')">
+            <img src="images/NVIDIA GeForce RTX 4090.jpeg" alt="NVIDIA RTX 4090">
+            <div class="component-info">
+              <h4>NVIDIA GeForce RTX 4090</h4>
+              <p class="price">$1,599</p>
+              <button>Add to Build</button>
+            </div>
+          </div>
+          <div class="component-card" onclick="addToCart('GPU', 'AMD RX 7900 XTX', 999, 'AMD Radeon RX 7900 XTX.jpeg')">
+            <img src="images/AMD Radeon RX 7900 XTX.jpeg" alt="AMD RX 7900 XTX">
+            <div class="component-info">
+              <h4>AMD Radeon RX 7900 XTX</h4>
+              <p class="price">$999</p>
+              <button>Add to Build</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional component categories would go here -->
+    </section>
+
+    <aside class="build-summary">
+      <h2>Your Current Build</h2>
+      <div id="current-build">
+        <p class="empty-message">Select components to begin your build</p>
+        <div id="build-items"></div>
+      </div>
+      <div class="build-total">
+        <p>Estimated Total: <span id="build-total-price">$0</span></p>
+        <a href="cart.html" class="cta-button">Proceed to Checkout</a>
+      </div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 PC FORGE SANCTUARY. All rights reserved.</p>
+      <div class="social-links">
+        <a href="#"><img src="images/fb.jpeg" alt="Facebook"></a>
+        <a href="#"><img src="images/github.jpeg" alt="Github"></a>
+        <a href="#"><img src="images/ig.jpeg" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+</html>
