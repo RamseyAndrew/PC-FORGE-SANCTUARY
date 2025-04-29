@@ -13,37 +13,45 @@ function renderBuildItems() {
   const buildItems = document.getElementById('build-items');
   buildItems.innerHTML = '';
   let total = 0;
-  cart.forEach(item => {
-    const div = document.createElement('div');
-    div.classList.add('build-item');
-    div.innerHTML = `
-      <img src="images/${item.image}" alt="${item.name}">
-      <h4>${item.name}</h4>
-      <p>$${item.price}</p>
-    `;
-    buildItems.appendChild(div);
-    total += item.price;
-  });
-  document.getElementById('build-total-price').textContent = `$${total}`;
+  if (cart.length === 0) {
+    buildItems.innerHTML = '<p class="empty-message">No items in your build yet.</p>';
+  } else {
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.classList.add('build-item');
+      div.innerHTML = `
+        <img src="images/${item.image}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p>$${item.price}</p>
+      `;
+      buildItems.appendChild(div);
+      total += item.price;
+    });
+    document.getElementById('build-total-price').textContent = `$${total}`;
+  }
 }
 
 function renderCart() {
   const cartItems = document.getElementById('cart-items');
   cartItems.innerHTML = '';
   let total = 0;
-  cart.forEach(item => {
-    const div = document.createElement('div');
-    div.classList.add('cart-item');
-    div.innerHTML = `
-      <img src="images/${item.image}" alt="${item.name}">
-      <h4>${item.name}</h4>
-      <p>$${item.price}</p>
-    `;
-    cartItems.appendChild(div);
-    total += item.price;
-  });
-  document.getElementById('subtotal').textContent = `$${total}`;
-  document.getElementById('total').textContent = `$${total}`;
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<p class="empty-message">Your cart is empty.</p>';
+  } else {
+    cart.forEach(item => {
+      const div = document.createElement('div');
+      div.classList.add('cart-item');
+      div.innerHTML = `
+        <img src="images/${item.image}" alt="${item.name}">
+        <h4>${item.name}</h4>
+        <p>$${item.price}</p>
+      `;
+      cartItems.appendChild(div);
+      total += item.price;
+    });
+    document.getElementById('subtotal').textContent = `$${total}`;
+    document.getElementById('total').textContent = `$${total}`;
+  }
 }
 
 function addToCart(category, name, price, image) {
