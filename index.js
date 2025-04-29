@@ -119,7 +119,7 @@ function setupFormHandler() {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    alert('Order placed! Thank you for shopping with PC FORGE SANCTUARY.');
+    alert('Order placed! Thank you for shopping at PC FORGE SANCTUARY.');
 
     cart = [];
     saveCart();
