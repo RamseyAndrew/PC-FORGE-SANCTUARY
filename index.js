@@ -40,7 +40,7 @@ function renderCart() {
   if (cart.length === 0) {
     cartItems.innerHTML = '<p class="empty-message">Your cart is empty.</p>';
   } else {
-    cart.forEach(item => {
+    cart.forEach(item, index => {
       const div = document.createElement('div');
       div.classList.add('cart-item');
       div.innerHTML = `
@@ -50,7 +50,7 @@ function renderCart() {
         <button onclick="removeFromCart(${index})" class="remove-button">Remove</button>
       `;
       cartItems.appendChild(div);
-      total += item.price;
+      total += Number(item.price);
     });
     document.getElementById('subtotal').textContent = `$${total}`;
     document.getElementById('total').textContent = `$${total}`;
