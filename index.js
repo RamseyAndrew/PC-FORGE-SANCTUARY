@@ -34,28 +34,29 @@ function renderBuildItems() {
 }
 
 function renderCart() {
-  const cartItems = document.getElementById('cart-items');
-  cartItems.innerHTML = '';
-  let total = 0;
-  if (cart.length === 0) {
-    cartItems.innerHTML = '<p class="empty-message">Your cart is empty.</p>';
-  } else {
-    cart.forEach(item, index => {
-      const div = document.createElement('div');
-      div.classList.add('cart-item');
-      div.innerHTML = `
-        <img src="images/${item.image}" alt="${item.name}">
-        <h4>${item.name}</h4>
-        <p>$${item.price}</p>
-        <button onclick="removeFromCart(${index})" class="remove-button">Remove</button>
-      `;
-      cartItems.appendChild(div);
-      total += Number(item.price);
-    });
-    document.getElementById('subtotal').textContent = `$${total}`;
-    document.getElementById('total').textContent = `$${total}`;
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    let total = 0;
+    if (cart.length === 0) {
+      cartItems.innerHTML = '<p class="empty-message">Your cart is empty.</p>';
+    } else {
+      cart.forEach((item, index) => {  // Corrected this line
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `  
+          <img src="images/${item.image}" alt="${item.name}">
+          <h4>${item.name}</h4>
+          <p>$${item.price}</p>
+          <button onclick="removeFromCart(${index})" class="remove-button">Remove</button>
+        `;
+        cartItems.appendChild(div);
+        total += Number(item.price);
+      });
+      document.getElementById('subtotal').textContent = `$${total}`;
+      document.getElementById('total').textContent = `$${total}`;
+    }
   }
-}
+  
 
 function addToCart(category, name, price, image) {
   const item = { category, name, price, image };
