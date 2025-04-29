@@ -1,3 +1,6 @@
+// ⚠️ TEMPORARY: Reset cart on page load for clean testing (REMOVE this line later!)
+localStorage.removeItem('cart');
+
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function saveCart() {
