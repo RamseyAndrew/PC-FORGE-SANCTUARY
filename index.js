@@ -47,6 +47,7 @@ function renderCart() {
         <img src="images/${item.image}" alt="${item.name}">
         <h4>${item.name}</h4>
         <p>$${item.price}</p>
+        <button onclick="removeFromCart(${index})" class="remove-button">Remove</button>
       `;
       cartItems.appendChild(div);
       total += item.price;
