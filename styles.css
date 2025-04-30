@@ -8,6 +8,21 @@
   --warning: #fdcb6e;
   --danger: #d63031;
 }
+/* Style the nav items with icons */
+nav a {
+  font-size: 16px; /* Adjust text size */
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Space out the links */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit color from parent */
+}
+
+nav a i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 20px; /* Adjust icon size */
+}
+
 
 * {
   margin: 0;
