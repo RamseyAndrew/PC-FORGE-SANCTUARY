@@ -73,7 +73,6 @@ function renderCart() {
 }
 
 function addToCart(category, name, price, image) {
-  // Prevent duplicate items (optional)
   const exists = cart.find(item => item.name === name && item.category === category);
   if (exists) {
     alert('Item is already in your cart.');
