@@ -102,7 +102,7 @@ button, .cta-button {
 }
 
 button:hover, .cta-button:hover {
-  background-color: #5649c0;
+  background-color: greenyellow;
   transform: translateY(-2px);
 }
 
