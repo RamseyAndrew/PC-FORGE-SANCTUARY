@@ -476,59 +476,48 @@ footer .container {
 .social-links img:hover {
   opacity: 1;
 }
-
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
     text-align: center;
     padding: 40px 0;
   }
-  
   .hero-content {
     padding-right: 0;
     margin-bottom: 30px;
   }
-  
   .builder-container {
     flex-direction: column;
   }
-  
   .build-summary {
     position: static;
     margin-top: 40px;
   }
-  
   nav {
     float: none;
     display: block;
     margin-top: 20px;
   }
-  
   nav a {
     display: inline-block;
     margin: 0 10px 10px 0;
   }
 }
-
 @media (max-width: 480px) {
   .component-grid {
     grid-template-columns: 1fr;
   }
-  
   .builds-grid {
     grid-template-columns: 1fr;
   }
-  
   .cart-item {
     flex-direction: column;
     text-align: center;
   }
-  
   .cart-item img {
     margin-right: 0;
     margin-bottom: 15px;
   }
-  
   .cart-item-price {
     margin: 15px 0;
   }
@@ -542,7 +531,6 @@ footer .container {
   cursor: pointer;
   border-radius: 4px;
 }
-
 .remove-button:hover {
   background-color: #c0392b;
 }
