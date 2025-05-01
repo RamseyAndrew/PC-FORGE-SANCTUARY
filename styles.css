@@ -35,7 +35,7 @@ body {
   background-color: lavender;
   color: var(--dark);
   line-height: 1.6;
-  background-image: url("images/Republic\ Of\ Gamers\ Rgb\ GIF\ by\ ASUS\ Republic\ of\ Gamers\ Deutschland.gif"); /* Path to your GIF */
+  background-image: url("images/ROG.gif");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
