@@ -35,12 +35,7 @@ body {
   background-color: lavender;
   color: var(--dark);
   line-height: 1.6;
-  background-image: url("images/ROG.gif");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: scroll;
-}
+ }
 
 h1, h2, h3, h4 {
   font-family: 'Orbitron', sans-serif;
